@@ -1,0 +1,49 @@
+.contenedorgridmarencjai{
+    font-size: 1.2em;
+    display: grid;
+    grid-template-columns: 20% auto 20%;
+    grid-template-rows: 25vh auto 25vh;
+    grid-gap:1em; 
+    margin: 0 auto;
+    max-width: 90vw;
+    padding: 1em 0;
+}
+
+header, footer{
+    grid-column: 1 / 4;
+}
+main, aside{
+    min-height: 50vh;
+}
+
+header, main, aside, footer{
+    background-color: #eaeaea;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.imagen1marencjai, .imagen3marencjai{
+    max-height: 10vw;
+}
+.imagen2marencjai{
+    max-width: 60vh;
+    min-width: 40vh;
+    width: auto;
+}
+@media all and (max-width: 500px){
+    .contenedorgridmarencjai{
+        grid-template-rows: auto;
+    }
+    aside{
+        grid-column: 1 / 4;
+        min-height: 25vh;
+    }
+    main{
+        grid-column: 1 / 4;
+        min-height: 50vh;
+        word-wrap: break-word;
+        height: auto;
+    }
+}
